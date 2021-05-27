@@ -363,14 +363,13 @@ axios.get(`https://api.lunarcrush.com/v2?data=market&key=nocqsi30btftgtw6lbaol&l
           `
 
           document.getElementById('cryptoChart').append(cryptoElem)
-
         })
         .catch(err => console.error(err))
     })
   })
   .catch(err => console.error(err))
 
-  // Javascript for materialize "dropdown" on homepage
+// Javascript for materialize "dropdown" on homepage
 // document.addEventListener('DOMContentLoaded', function () {
 //   var elems = document.querySelectorAll('.dropdown-trigger')
 //   var instances = M.Dropdown.init(elems, {
@@ -400,8 +399,7 @@ document.getElementById('target').addEventListener('change', function () {
 // eventListener for convert button click on Homepage
 document.getElementById('convertButton').addEventListener('click', event => {
   event.preventDefault()
-  event.stopPropagation()
- 
+
   // Grab currency type (fiat or crypto)
   let a = document.getElementById("a")
   let currencyType = a.options[a.selectedIndex].value
@@ -494,7 +492,6 @@ document.getElementById('convertButton').addEventListener('click', event => {
 } else {
   
 }
-
 })
 
 // Trying to figure out how to get the select/dropdown to render different lists based on what they pick first
@@ -524,7 +521,7 @@ document.getElementById('convertButton').addEventListener('click', event => {
 
 // Favorites button
 document.addEventListener('click', event => {
-  event.preventDefault()
+  // event.preventDefault()
   if (event.target.classList.contains('fav-btn')) {
     console.log(event.target.parentElement.dataset.test)
     console.log(event.target.parentElement.dataset.fiat)
